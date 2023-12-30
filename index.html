@@ -1,0 +1,41 @@
+<!-- Boiler plate linking JavaScript, JQuery, Bootstrap, and CSS-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+    <h4 class="display-4">Software Department Employees</h4>
+    <div class="center">
+        <div class="row" id="new-employee">
+            <h5>Enter New Employee</h5>
+
+            <label for="Employee Name">Employee Name</label>
+            <input type="text" id="employeeName">
+
+            <label for="Job Title">Job Title</label>
+            <input type="text" id="jobTitle">
+
+            <div class="text-center">
+                <button class="btn btn-success" id="submitBtn">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The API return contents -->
+    <div id="app" class="mt-3">
+
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

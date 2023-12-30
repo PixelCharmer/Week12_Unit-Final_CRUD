@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+
+/* Background image */
+body {
+    background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-vector-banner-or-flyer-template-with-white-background-picture-image_984649.jpg");
+    background-size: cover;
+}
+
+/* Centering the page header */
+.center {
+    width: 37%;
+    margin: auto;
+}
+
+
+/* Adding styling to the boxes */
+#new-employee {
+    border-radius: 25px;
+    border: 2px solid #21a1ad;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 20px 20px 50px grey;
+
+}
+
+h4 {
+    text-align: center;
+    padding-bottom: 30px;
+    font-family: 'Merriweather', serif;
+    ;
+}
+
+.card {
+    border: 2px solid #21a1ad;
+    border-radius: 25px;
+    padding: 20px;
+    width: 500px;
+    margin-bottom: 20px;
+    margin: auto;
+    box-shadow: 20px 20px 50px grey;
+}
+
+#submitBtn {
+    margin-top: 10px;
+}
+
+/* Adding styling to the input fields */
+input[type=text] {
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid dimgray;
+    border-radius: 4px;
+}
