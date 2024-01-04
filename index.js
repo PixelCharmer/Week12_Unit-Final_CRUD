@@ -13,7 +13,7 @@ class Employee {
 // API calls and runs the returns
 // data is pulled from mock API I created
 class EmployeeLog {
-    static url = 'https://658fe9e4cbf74b575eca3f7e.mockapi.io/Employee_Log_API/employees'
+    static url = 'https://65969bb86bb4ec36ca02fd61.mockapi.io/employees'
 
     // retrive all employees from API
     static getAllEmployees() {
