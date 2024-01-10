@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/PixelCharmer/Week12_Unit-Final_CRUD">
-    <img src="https://github.com/PixelCharmer/Week12_Unit-Final_CRUD/assets/145899504/84173e0f-834f-49d5-b707-0fc705c74f3c" alt="Logo" width="100" height="100">
+    <img src="https://github.com/PixelCharmer/Week12_Unit-Final_CRUD/assets/145899504/84173e0f-834f-49d5-b707-0fc705c74f3c" alt="Logo" width="400" height="400">
   </a>
 
   <h1 align="center">Employee List CRUD App</h1>
