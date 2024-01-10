@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/PixelCharmer/Week12_Unit-Final_CRUD">
-    <img src="https://github.com/PixelCharmer/Week12_Unit-Final_CRUD/assets/145899504/84173e0f-834f-49d5-b707-0fc705c74f3c" alt="Logo" width="80" height="80">
+    <img src="https://github.com/PixelCharmer/Week12_Unit-Final_CRUD/assets/145899504/84173e0f-834f-49d5-b707-0fc705c74f3c" alt="Logo">
   </a>
 
   <h3 align="center">Employee List CRUD App</h3>
@@ -31,7 +31,7 @@
 
 ## About The Project
 
-![Screen Shot](https://github.com/PixelCharmer/Week12_Unit-Final_CRUD/assets/145899504/f8046762-fc8b-4b26-aeaa-3c293c9c9c51)
+![Screen Shot](https://github.com/PixelCharmer/Week12_Unit-Final_CRUD/assets/145899504/6f060af4-8966-47d3-9688-fc6faccff4b7)
 
 This CRUD (Create, Read, Update, Delete) application is designed for managing employee data in a software department. The app follows a basic Model-View-Controller (MVC) pattern, separating data management (EmployeeLog) from UI rendering (DOMManager). It provides functionality for creating, reading, updating, and deleting employee records.
 
