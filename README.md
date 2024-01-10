@@ -1,81 +1,129 @@
+<br/>
+<p align="center">
+  <a href="https://github.com/PixelCharmer/Week12_Unit-Final_CRUD">
+    <img src="https://github.com/PixelCharmer/Week12_Unit-Final_CRUD/assets/145899504/84173e0f-834f-49d5-b707-0fc705c74f3c" alt="Logo" width="80" height="80">
+  </a>
 
-# Employee List - CRUD App
+  <h3 align="center">Employee List CRUD App</h3>
 
-A CRUD app that using an API to retrive and maintain a list of employee's and their job title. 
+  <p align="center">
+    A fully functional web CRUD App
+    <br/>
+    <br/>
+    <a href="https://github.com/PixelCharmer/Week12_Unit-Final_CRUD"><strong>Explore the docs »</strong></a>
+    <br/>
+    <br/>
+  </p>
+</p>
 
+![Forks](https://img.shields.io/github/forks/PixelCharmer/Week12_Unit-Final_CRUD?style=social) ![Stargazers](https://img.shields.io/github/stars/PixelCharmer/Week12_Unit-Final_CRUD?style=social) ![Issues](https://img.shields.io/github/issues/PixelCharmer/Week12_Unit-Final_CRUD) 
 
-## Tech Stack
+## Table Of Contents
 
-**Client:** HTML, CSS, JavaScript, JQuery, Ajax
+* [About the Project](#about-the-project)
+* [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Authors](#authors)
+* [Acknowledgements](#acknowledgements)
 
-**Server:** Node, JSON
+## About The Project
 
+![Screen Shot](https://github.com/PixelCharmer/Week12_Unit-Final_CRUD/assets/145899504/f8046762-fc8b-4b26-aeaa-3c293c9c9c51)
 
-## API Reference
+This CRUD (Create, Read, Update, Delete) application is designed for managing employee data in a software department. The app follows a basic Model-View-Controller (MVC) pattern, separating data management (EmployeeLog) from UI rendering (DOMManager). It provides functionality for creating, reading, updating, and deleting employee records.
 
-API created with MockAPI: https://658fe9e4cbf74b575eca3f7e.mockapi.io/Employee_Log_API/employees
+## Built With
 
-#### Get all employees
+* JavaScript
+* JQuery
+* Bootstrap
+* CSS
 
-```http
-  $.get(api)
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+Make sure your local machine has the latest version on npm installed 
+
+* npm
+
+```sh
+npm install npm@latest -g
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `employees` | `faker.js` | Retrives te full employee list |
+### Installation
 
-#### Get employee
+1. Access API at https://65969bb86bb4ec36ca02fd61.mockapi.io/employees
 
-```http
-  $.get((this.url) + `/${id}`)
+2. Clone the repo
+
+```sh
+git clone https://github.com/PixelCharmer/Week12_Unit-Final_CRUD.git
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `Object ID` | Id of item to fetch |
+3. Install NPM packages
 
-#### Create employee
-
-```http
-  $.post(this.url, employee, jobTitle)
+```sh
+npm install
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| ``      | `string` | Adds new instance of employee |
+4. Open the index.html file in a web browser.
 
-#### Update employee
-
-```http
-  url: this.url + '/' + id
-  type: put
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `jobTitle`      | `string` | Updates employee job title |
-
-#### Delete employee
-
-```http
-  url: this.url + `/${id}`,
-  type: 'DELETE'
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | Delete full instance of employee|
+## Usage
 
 
+* Add New Employee
+  * Enter the employee name and job title in the "Enter New Employee" section.
+  * Click the "Add" button to create a new employee record.
 
 
-## Installation
+* View Employee List
+The app displays a list of employees retrieved from a mock API.
 
-Install my-project with npm
+* Update Employee Record
+  * Click the pencil icon to edit an employee's job title.
+  * Update the job title and click the save icon (💾) to apply changes.
 
-```bash
-  npm install my-project
-  cd my-project
-```
-    
+* Delete Employee Record
+  * Click the wastebasket icon (🗑️) to delete an employee record.
+
+
+#### Code Structure
+* HTML (index.html)
+  * Structure for the web page layout.
+  * Includes necessary dependencies like Bootstrap and custom CSS.
+
+* JavaScript (index.js)
+  * Implements the CRUD functionalities using JQuery.
+  * Defines the Employee class for employee objects.
+  * Manages API calls and returns using the EmployeeLog class.
+  * Handles UI rendering using the DOMManager class.
+
+#### API Endpoint
+The app interacts with a mock API endpoint: https://65969bb86bb4ec36ca02fd61.mockapi.io/employees
+
+#### Access
+Open the web page in a browser.
+Add, update, or delete employee records as needed.
+
+## Contributing
+
+Contributions are welcome. Feel free to open issues or submit pull requests.
+
+### Creating A Pull Request
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Authors
+
+* **Kari Alcoset** - *Promineo Tech Front End Student* - [Kari Alcoset](https://github.com/PixelCharmer) - *Built Entire Web App*
