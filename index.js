@@ -1,8 +1,15 @@
+/* It follows a basic model-view-controller (MVC) pattern, separating data management (EmployeeLog) from UI rendering (DOMManager).
+It provides functionality for creating, reading, updating, and deleting (CRUD) employee data. 
+*/
+
+
 
 // adding functionality to the add button in the new employee box
+// when the button is clicked, it calls the submitClick() function
 document.getElementById('submitBtn').addEventListener('click', () => { submitClick() });
 
-// class to hold the individual empployee record 
+// defines the blueprint that represents the employee objects
+// its used to structure the employee data with properties employee name and jobtitle
 class Employee {
     constructor(employee, jobTitle) {
         this.employee = employee;
@@ -15,22 +22,23 @@ class Employee {
 class EmployeeLog {
     static url = 'https://65969bb86bb4ec36ca02fd61.mockapi.io/employees'
 
-    // retrive all employees from API
+    // grabs all employees from the API
     static getAllEmployees() {
         return $.get(this.url);
     }
 
-    // retrive employee by id
+    // grabs a specific employee by ID index 
     static getEmployee(id) {
         return $.get((this.url) + `/${id}`);
     }
 
-    // function to create a new employee
+    // method to create a new employee
     static createEmployee(employee, jobTitle) {
         return $.post(this.url, employee, jobTitle);
     }
 
-    // function to update an employee record - click pencil to make update
+    // method to update an employee record
+    // click pencil to make update
     static updateEmployee(id, jobTitle) {
         $(`#editEmployee_${id}`).show();
         $(`#${id} p`).hide();
@@ -49,7 +57,8 @@ class EmployeeLog {
             });
     }
 
-    // function to delete an employee record - click wastebasket to make update
+    // method to delete an employee record
+    // click wastebasket to active the delete 
     static deleteEmployee(id) {
         return $.ajax({
             url: this.url + `/${id}`,
@@ -59,14 +68,15 @@ class EmployeeLog {
 }
 
 
-// creates the vitual DOM
+// manages the display of employee data in the HTML documen
 class DOMManager {
 
+    // grabs all employees and renders them in the page
     static getAllEmployees() {
         EmployeeLog.getAllEmployees().then(employees => this.render(employees));
     }
 
-    // calling the delete employee function 
+    // deletes an employee and updates the display
     static deleteEmployee(id) {
         EmployeeLog.deleteEmployee(id)
             .then(() => {
@@ -75,7 +85,7 @@ class DOMManager {
             .then((employees) => this.render(employees));
     }
 
-    // calling the create employee function
+    // creates a new employee and updates the display
     static createEmployee(employee, jobTitle) {
         EmployeeLog.createEmployee(new Employee(employee, jobTitle))
             .then(() => {
@@ -84,6 +94,7 @@ class DOMManager {
             .then((employees) => this.render(employees));
     }
 
+    // renders the provided employee data in HTML format
     // rendering multiple instances of employee using a for each loop
     // new instances are prepended to the list
     static render(employees) {
