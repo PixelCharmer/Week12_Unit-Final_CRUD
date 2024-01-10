@@ -22,21 +22,25 @@ class Employee {
 class EmployeeLog {
     static url = 'https://65969bb86bb4ec36ca02fd61.mockapi.io/employees'
 
+    //! CREATE
+    // method to create a new employee
+    static createEmployee(employee, jobTitle) {
+        return $.post(this.url, employee, jobTitle);
+    }
+    
+    //! READ     
     // grabs all employees from the API
     static getAllEmployees() {
         return $.get(this.url);
     }
 
+    //! READ
     // grabs a specific employee by ID index 
     static getEmployee(id) {
         return $.get((this.url) + `/${id}`);
     }
 
-    // method to create a new employee
-    static createEmployee(employee, jobTitle) {
-        return $.post(this.url, employee, jobTitle);
-    }
-
+    //! UPDATE
     // method to update an employee record
     // click pencil to make update
     static updateEmployee(id, jobTitle) {
@@ -57,6 +61,7 @@ class EmployeeLog {
             });
     }
 
+    //! DELETE
     // method to delete an employee record
     // click wastebasket to active the delete 
     static deleteEmployee(id) {
